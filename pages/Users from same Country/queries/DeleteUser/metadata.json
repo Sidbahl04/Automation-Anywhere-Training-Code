@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "68a3276fd0b8bb03282a0ce8_96a57255-6417-4879-b4e4-bf24bbcff4d9",
-  "id": "Page1_UpdateUser",
+  "gitSyncId": "68a590c4fcb2454bc950e6ba_9334de00-1a55-43d3-adcd-6387ecd5500a",
+  "id": "Users from same Country_DeleteUser",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE public.\"users\" SET\n    \"gender\" = '{{CreateUserForm.formData.gender}}',\n    \"email\" = '{{CreateUserForm.formData.email}}',\n    \"name\" = '{{CreateUserForm.formData.name}}'\nWHERE id = '{{Table1.selectedRow.id}}'",
+      "body": "DELETE FROM public.\"users\"\n  WHERE id = '{{Table1.selectedRow.id}}'",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,8 +27,8 @@
         "key": "body"
       }
     ],
-    "name": "UpdateUser",
-    "pageId": "Page1",
+    "name": "DeleteUser",
+    "pageId": "Users from same Country",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
